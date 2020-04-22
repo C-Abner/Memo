@@ -20,6 +20,10 @@ go tool cover -html=cover.out
 # get not covered func
 grep -r -B15 --color=auto cov0 coverage.html |grep func 
 ```
+- golang test test cmd
+`go test -coverprofile=cover.out > 1 && go tool cover -html=cover.out -o coverage.html && grep -r -B15 --color=auto cov0 coverage.html |grep func`
+- go test no cached
+`go test -count=1`
 
 # how to remove go's plugin 
 ```
